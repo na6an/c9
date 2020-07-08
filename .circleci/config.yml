@@ -12,7 +12,9 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: ./app.py test
+          command: |
+            sudo chmod +x ./app.py
+            ./app.py test
           name: Test
 
 workflows:
